@@ -1,0 +1,7 @@
+PAYROLL REPORT
+--------------------
+Ahmed: 1200.00 OMR
+Sara: 1500.00 OMR
+Irteza: 1800.00 OMR
+--------------------
+Total Payroll: 4500.00 OMR

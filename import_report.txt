@@ -1,0 +1,10 @@
+
+    ERP IMPORT REPORT
+
+    Total: 6
+    Valid: 4
+    Invalid: 2
+
+    Errors:
+   Line 3:Invalid salary
+   Line 5:Invalid record structure

@@ -1,0 +1,32 @@
+[
+    {
+        "request_id": "PR-2026-001",
+        "department": "Marketing",
+        "amount": 1250.0,
+        "approved": true
+    },
+    {
+        "request_id": "PR-2026-002",
+        "department": "Engineering",
+        "amount": 8400.0,
+        "approved": false
+    },
+    {
+        "request_id": "PR-2026-003",
+        "department": "Human Resources",
+        "amount": 450.0,
+        "approved": true
+    },
+    {
+        "request_id": "PR-2026-004",
+        "department": "Operations",
+        "amount": 3120.0,
+        "approved": true
+    },
+    {
+        "request_id": "PR-2026-005",
+        "department": "Sales",
+        "amount": 950.0,
+        "approved": false
+    }
+]

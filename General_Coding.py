@@ -429,16 +429,588 @@
 # for num in generate_numbers():
 #     print(num)
 
-def generate_even_numbers(limit):
-    for i in range(limit):
-        if i % 2 == 0:
-            yield i
+# def generate_even_numbers(limit):
+#     for i in range(limit):
+#         if i % 2 == 0:
+#             yield i
 
-for num in generate_even_numbers(10):
-    print(num)
+# for num in generate_even_numbers(10):
+#     print(num)
+
+# def calculate_net_salary(basic_salary, allowance, deduction):
+#     gross = basic_salary + allowance
+#     return gross - deduction
+
+# net_salary = calculate_net_salary(350, 100, 50)
+
+# print(net_salary)
+
+
+# valid_emp = {"id": "emp1", "name": "Irteza", "basic_salary": 1200}
+
+# missing_id = {"name": "Ahmed", "basic_salary": 500}
+
+# missing_name = {"id": "emp3", "basic_salary": 600}
+
+# missing_salary = {"id": "emp4", "name": "Masooma"}
+
+# empty_id = {"id": "", "name": "Idrees", "basic_salary": 400}
+
+# zero_salary = {"id": "emp6", "name": "Salim", "basic_salary": 0}
+
+# negative_salary = {"id": "emp7", "name": "Tariq", "basic_salary": -150}
+
+# def validate_employee(employee):
+#     if "id" not in employee or "name" not in employee or "basic_salary" not in employee:
+#         return False
+#     if employee["id"] != "" and employee["name"] != "" and employee["basic_salary"] > 0:
+#         return True
+#     else:
+#         return False
+
+# emp = validate_employee(valid_emp)
+# print(emp)
+
+# emp = validate_employee(missing_name)
+# print(emp)
+
+# def calculate_invoice(amount, tax=5):
+#     return amount - amount * tax/100
+
+# cal = calculate_invoice(100, 2)
+# print(cal)
+
+# cal = calculate_invoice(200)
+# print(cal)
+
+# def create_employee(
+#     name,
+#     department,
+#     country="Oman",
+#     active=True
+# ):
+#     return{
+#         "name": name,
+#         "department": department,
+#         "country" : country,
+#         "active" : active
+#     }
+
+# pr = create_employee("irteza", "IT")
+# print(pr)
+# pr = create_employee("dev", "Sales", "India")
+# print(pr)
+# pr = create_employee(department="HR", active=False, name="sam", country="US")
+# print(pr)
+
+# def calculate_total(*args):
+#     return sum(args)
+
+# tot = calculate_total(100, 200)
+# print(tot)
+# tot = calculate_total(100, 200, 300, 400)
+# print(tot)
+
+
+# def print_employee(**kwargs):
+#     print(kwargs)
+
+
+# print_employee(
+#     name="Irteza",
+#     department="IT",
+#     salary=1500
+# )
+
+# def process_transaction(transaction_type, *amounts, **details):
+#     total = sum(amounts)
+#     print(total, details)
+
+
+# process_transaction(
+#     "invoice",
+#     100,
+#     200,
+#     300,
+#     customer="ABC Pharmacy",
+#     currency="OMR",
+#     approved=True
+# )
+
+
+# employees = [
+#     {"name": "Ahmed", "salary": 1200},
+#     {"name": "Sara", "salary": 1800},
+#     {"name": "Irteza", "salary": 2500}
+# ]
+
+
+# def calculate_tax(salary):
+#     return salary * 0.05
+
+
+# def calculate_bonus(salary):
+#     return salary * 0.10
+
+
+# def calculate_net_salary(salary, calculation):
+#     deduction = calculation(salary)
+#     return salary - deduction
+
+
+# calculations = {
+#     "tax": calculate_tax,
+#     "bonus": calculate_bonus
+# }
+
+
+# def process_employee(employee, calculation):
+#     salary = employee["salary"]
+
+#     net_salary = calculate_net_salary(
+#         salary,
+#         calculation
+#     )
+
+#     return {
+#         "name": employee["name"],
+#         "gross_salary": salary,
+#         "net_salary": net_salary
+#     }
+
+
+# for employee in employees:
+#     result = process_employee(
+#         employee,
+#         calculations["tax"]
+#     )
+
+#     print(result)
+
+# def calculate_tax(salary, tax):
+#     return
+
+# def calculate_bonus(salary, bonus):
+#     return salary + bonus
+
+# tax = calculate_tax
+
+# bonus = calculate_bonus
 
 
 
+# print(tax(1000, 5))
+# print(bonus(1000,25))
+
+# def tax_calculation(salary, tax):
+#     return salary * (tax/100)
+
+# def discount_calculation(salary, discount):
+#     return salary * (discount/100)
+
+# def bonus_calculation(salary, bonus):
+#     return salary * (bonus/100)
+
+
+# def apply_operation(amount, operation):
+#     value = float(input("enter percentage rate"))
+#     return operation(amount,value)
+
+# print(apply_operation(1500, tax_calculation))
+
+# def tax_calculation(salary, tax):
+#      return salary * (tax/100)
+
+# def comission_calculation(salary, discount):
+#      return salary * (discount/100)
+
+# def bonus_calculation(salary, bonus):
+#      return salary * (bonus/100)
+
+# rules = {
+#     "tax": tax_calculation,
+#     "bonus": bonus_calculation,
+#     "commission": comission_calculation
+# }
+
+# percentages = {
+#      "tax": 5,
+#      "bonus": 9,
+#      "comission": 2
+# }
+
+
+# def process_employee(amount, function):
+
+#     if function is tax_calculation:
+#         value = percentages["tax"]
+#     elif function is bonus_calculation:
+#         value = percentages["bonus"]
+#     elif function is comission_calculation:
+#         value = percentages["comission"]
+
+#     return function(amount, value)
+
+# print(process_employee(2500, rules["tax"]))
+     
+
+# def create_discount_calculator(discount_rate):
+
+#     def discount_calculator(price):
+#         return price - price * (discount_rate/100)
+
+#     return discount_calculator
+
+# dis_a = create_discount_calculator(10)
+# dis_b = create_discount_calculator(20)
+
+# print(dis_a(10000))
+# print(dis_b(10000))
+
+
+# def create_salary_calculator(allowance):
+
+#     def salary_calculator(basic_salary):
+#         return basic_salary + allowance
+
+#     return salary_calculator
+
+# hr_allowance_calculator = create_salary_calculator(300)
+# manager_allowance_calculator = create_salary_calculator(700)
+
+# print(hr_allowance_calculator(500))
+# print(manager_allowance_calculator(500))
+
+# employee = {
+#     "name": "Irteza",
+#     "basic_salary": 2000
+# }
+
+# def create_payroll_processor(**kwargs):
+#     allowance_rate = kwargs.get("allowance_rate", 0)
+#     tax_rate = kwargs.get("tax_rate", 0)
+
+#     def calculate(employee):
+#         gross_salary = employee["basic_salary"] + employee["basic_salary"] * (allowance_rate/100)
+#         net_salary = gross_salary - gross_salary * (tax_rate/100)
+#         return (net_salary,gross_salary)
+#     return calculate
+
+# omani = create_payroll_processor(allowance_rate = 10,tax_rate = 4)
+# expat = create_payroll_processor(allowance_rate =5, tax_rate = 4)
+
+# print(omani(employee))
+# print(expat(employee))
+
+
+# def audit_action(function):
+
+#     def wrapper(*args, **kwargs):
+#         print(f"[AUDIT] Starting {function.__name__}")
+
+#         result = function(*args, **kwargs)
+
+#         print(f"[AUDIT] Completed {function.__name__}")
+
+#         return result
+
+#     return wrapper
+
+
+# @audit_action
+# def calculate_net_salary(
+#     basic_salary,
+#     allowance=0,
+#     deduction=0
+# ):
+#     gross_salary = basic_salary + allowance
+#     net_salary = gross_salary - deduction
+
+#     return net_salary
+
+
+# @audit_action
+# def create_employee(name, department):
+#     return {
+#         "name": name,
+#         "department": department
+#     }
+
+
+# salary = calculate_net_salary(
+#     basic_salary=1500,
+#     allowance=300,
+#     deduction=100
+# )
+
+
+# employee = create_employee(
+#     name="Irteza",
+#     department="IT"
+# )
+
+# print(f"Net salary: {salary}")
+# print(employee)
+
+
+# def log_execution(function):
+
+#     def wrapper():
+#         print("starting generate_report....")
+
+#         function()
+
+#         print("Finished generate_report.....")
+
+#     return wrapper
+
+# @log_execution
+# def generate_report():
+#     print("Generating report...")
+
+
+# generate_report()
+
+
+# employees = [
+#     {
+#         "name": "Ahmed",
+#         "salary": 1200
+#     },
+#     {
+#         "name": "Sara",
+#         "salary": 1500
+#     },
+#     {
+#         "name": "Irteza",
+#         "salary": 1800
+#     }
+# ]
+
+
+# total_payroll = 0
+
+# with open("payroll_report.txt", "w") as file:
+#     file.write("PAYROLL REPORT\n")
+#     file.write("--------------------\n")
+
+#     for employee in employees:
+#         name = employee["name"]
+#         salary = employee["salary"]
+
+#         total_payroll += salary
+
+#         file.write(
+#             f"{name}: {salary:.2f} OMR\n"
+#         )
+
+#     file.write("--------------------\n")
+#     file.write(
+#         f"Total Payroll: {total_payroll:.2f} OMR\n"
+#     )
+
+
+# with open("payroll_report.txt", "r") as file:
+#     report = file.read()
+
+
+# print(report)
+
+# employees = ["john", "Ghafoor", "silesh", "Akmaisuchi", "ghanrafi"]
+
+# with open("employees.txt", "w") as names :
+#     for employee in employees:
+
+#         names.write(f"{employee}\n")
+
+# with open("employees.txt", "r") as file :
+#     names = file.read()
+# print(names)
+
+
+# with open("transactions.txt", "r") as file:
+#     total_transactions = 0
+#     no_of_transactions = 0
+#     transactions_1500 = 0
+#     for line in file:
+#         transactions = int(line.strip())
+#         total_transactions += transactions
+#         no_of_transactions += 1
+#         if transactions >= 1500:
+#             transactions_1500 += 1
+#     with open("transaction_summary.txt", "w") as file:
+#         file.write(f"{total_transactions}\n")
+#         file.write(f"{no_of_transactions}\n")
+#         file.write(f"{transactions_1500}\n")
+
+
+
+# with open("record.txt", "r") as file:
+#     datas = []
+#     errors = []
+#     total = 0
+#     invalid = 0
+#     for line in file:
+#         total += 1
+#         cleaned_line = line.strip()
+#         datas.append(cleaned_line.split(","))
+#     print
+#     for i,data in enumerate(datas, start =1):
+#         if len(data)< 3 :
+#             invalid += 1
+#             errors.append({
+#                   f"Line {i}": "Invalid record structure"  
+#                 })
+#         elif not int(data[2]) > 0:
+#             invalid += 1
+#             errors.append({
+#                 f"Line {i}" : "Invalid salary"
+#             }) 
+#     with open("import_report.txt", "w") as file:
+#         file.write(f"""
+#     ERP IMPORT REPORT
+
+#     Total: {total}
+#     Valid: {total - invalid}
+#     Invalid: {invalid}
+
+#     Errors:\n""")   
+#         for error in errors:
+#             for line, err in error.items():
+#                 file.write(f"   {line}:{err}\n")         
+
+
+
+# from pathlib import Path
+
+# path = Path("reports") / "payroll"
+
+# path.mkdir(
+#     parents = True,
+#     exist_ok= True
+# )
+
+# report_path = path / "report.txt"
+
+# report_path.touch()
+
+# if path.exists():
+#     print("File exists")
+# else:
+#     print("File doesnt exist")
+
+# from pathlib import Path
+
+# files = [
+#     "invoice.pdf",
+#     "employees.csv",
+#     "policy.txt",
+#     "payroll.xlsx",
+#     "contract.pdf"
+# ]
+
+# #path = Path(files)
+
+# for file in files:
+#     if Path(file).suffix == ".pdf" :
+#         print(file)
+
+# from pathlib import Path
+
+
+# # file = Path("seq_det.v")
+
+# # print("Path:")
+# # print(file)
+
+# # print("\nAbsolute Path:")
+# # print(file.absolute())
+# #file = Path("The Quran and its interpreters - Vol 1.pdf")
+
+# file_location = Path(r"d:\code\Linux_Commands_Cheat_Sheet.pdf")
+
+# with open(file_location, "rb") as pdf_file:
+#     content = pdf_file.read()
+#     print(content)
+
+# import json
+# invoice = {
+#     "invoice_id": "INV-1001",
+#     "customer": "ABC Pharmacy",
+#     "amount": 1250.500,
+#     "paid": False
+# }
+
+# json_data = json.dumps(invoice)
+
+# print(json_data)
+# print(type(json_data))
+
+# from pathlib import Path
+# import json
+
+# purchase_requests = [
+#     {
+#         "request_id": "PR-2026-001",
+#         "department": "Marketing",
+#         "amount": 1250.00,
+#         "approved": True
+#     },
+#     {
+#         "request_id": "PR-2026-002",
+#         "department": "Engineering",
+#         "amount": 8400.00,
+#         "approved": False
+#     },
+#     {
+#         "request_id": "PR-2026-003",
+#         "department": "Human Resources",
+#         "amount": 450.00,
+#         "approved": True
+#     },
+#     {
+#         "request_id": "PR-2026-004",
+#         "department": "Operations",
+#         "amount": 3120.00,
+#         "approved": True
+#     },
+#     {
+#         "request_id": "PR-2026-005",
+#         "department": "Sales",
+#         "amount": 950.00,
+#         "approved": False
+#     }
+# ]
+
+# exports = Path("exports")
+
+# exports.mkdir(exist_ok= True)
+
+# purchase_file = exports / "purchase_requests.json"
+
+# with purchase_file.open("w") as file:
+#     json.dump(purchase_requests, file, indent= 4)
+
+
+# with purchase_file.open("r") as file:
+#     imported_purchase_requests = json.load(file)
+
+# total_requests = 0
+# total_approved_amount = 0
+# approved_requests = []
+# rejected_requests = []
+# for purchase_requests in imported_purchase_requests:
+#     total_requests += 1
+#     if purchase_requests["approved"] == True:
+#         approved_requests.append(purchase_requests)
+#         total_approved_amount += purchase_requests["amount"]
+#     elif purchase_requests["approved"] == False:
+#         rejected_requests.append(purchase_requests)
+    
+# print(total_requests)
+# print(total_approved_amount)     
+# print(approved_requests)
+# print(rejected_requests)
 
 
 
