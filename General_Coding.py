@@ -1012,6 +1012,75 @@
 # print(approved_requests)
 # print(rejected_requests)
 
+# from pathlib import Path
+# import csv
+
+# sales_csv = Path("sales.csv")
+
+# with sales_csv.open("r", newline= "", encoding= "utf-8") as file :
+#     reader = csv.DictReader(file)
+#     amount = 0
+#     for data in reader:
+#         amount += float(data["amount"])
+        
+# print(amount)
+
+from pathlib import Path
+import csv
+
+salary_file = Path("employee_salaries.csv")
+
+with salary_file.open("r", newline="", encoding="utf-8") as file:
+    reader = csv.DictReader(file)
+    total_employees = 0
+    highest_paid = 0
+    total_payroll = 0
+    High_pay = []
+    for employee in reader:
+        total_employees +=1
+        total_payroll += float(employee["salary"])
+        if highest_paid <= float(employee["salary"]):
+            highest_paid = float(employee["salary"])
+            highest_paid_emp = employee["First_Name"] + employee["Last_Name"]
+        if float(employee["salary"]) > 80000 :
+            High_pay.append(employee)
+        avg_salary = total_payroll/total_payroll
+    
+
+with open("Summary.txt", "w") as file:
+    file.write(f"""
+================
+SUMMARY
+================
+Total employees : {total_employees}
+Total payroll : {total_payroll}
+Average salary : {avg_salary}
+Highest-paid employee : {highest_paid_emp}
+Employees earning > 1000 : {High_pay}
+-----------------------
+""")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

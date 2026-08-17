@@ -1,0 +1,11 @@
+
+================
+SUMMARY
+================
+
+Total employees : 10
+Total payroll : 920000.0
+Average salary : 1.0
+Highest-paid employee : RobertMoore
+Employees earning > 1000 : [{'Employee_ID': 'EMP001', 'First_Name': 'John', 'Last_Name': 'Doe', 'Department': 'Engineering', 'Job_Title': 'Software Engineer', 'Years_Experience': '3', 'salary': '85000', 'Hire_Date': '2023-03-15'}, {'Employee_ID': 'EMP004', 'First_Name': 'Emily', 'Last_Name': 'Williams', 'Department': 'Human Resources', 'Job_Title': 'HR Manager', 'Years_Experience': '8', 'salary': '92000', 'Hire_Date': '2019-11-05'}, {'Employee_ID': 'EMP005', 'First_Name': 'David', 'Last_Name': 'Brown', 'Department': 'Engineering', 'Job_Title': 'Senior Developer', 'Years_Experience': '10', 'salary': '130000', 'Hire_Date': '2017-04-30'}, {'Employee_ID': 'EMP006', 'First_Name': 'Sarah', 'Last_Name': 'Davis', 'Department': 'Data Science', 'Job_Title': 'Data Scientist', 'Years_Experience': '4', 'salary': '105000', 'Hire_Date': '2021-06-18'}, {'Employee_ID': 'EMP008', 'First_Name': 'Amanda', 'Last_Name': 'Wilson', 'Department': 'Marketing', 'Job_Title': 'Marketing Manager', 'Years_Experience': '9', 'salary': '98000', 'Hire_Date': '2018-09-01'}, {'Employee_ID': 'EMP009', 'First_Name': 'Robert', 'Last_Name': 'Moore', 'Department': 'Finance', 'Job_Title': 'Controller', 'Years_Experience': '12', 'salary': '145000', 'Hire_Date': '2015-05-12'}]
+-----------------------
