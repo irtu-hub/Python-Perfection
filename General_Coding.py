@@ -1025,40 +1025,131 @@
         
 # print(amount)
 
-from pathlib import Path
-import csv
+# from pathlib import Path
+# import csv
 
-salary_file = Path("employee_salaries.csv")
+# salary_file = Path("employee_salaries.csv")
 
-with salary_file.open("r", newline="", encoding="utf-8") as file:
-    reader = csv.DictReader(file)
-    total_employees = 0
-    highest_paid = 0
-    total_payroll = 0
-    High_pay = []
-    for employee in reader:
-        total_employees +=1
-        total_payroll += float(employee["salary"])
-        if highest_paid <= float(employee["salary"]):
-            highest_paid = float(employee["salary"])
-            highest_paid_emp = employee["First_Name"] + employee["Last_Name"]
-        if float(employee["salary"]) > 80000 :
-            High_pay.append(employee)
-        avg_salary = total_payroll/total_payroll
+# with salary_file.open("r", newline="", encoding="utf-8") as file:
+#     reader = csv.DictReader(file)
+#     total_employees = 0
+#     highest_paid = 0
+#     total_payroll = 0
+#     High_pay = []
+#     for employee in reader:
+#         total_employees +=1
+#         total_payroll += float(employee["salary"])
+#         if highest_paid <= float(employee["salary"]):
+#             highest_paid = float(employee["salary"])
+#             highest_paid_emp = employee["First_Name"] + employee["Last_Name"]
+#         if float(employee["salary"]) > 80000 :
+#             High_pay.append(employee)
+#         avg_salary = total_payroll/total_payroll
     
 
-with open("Summary.txt", "w") as file:
-    file.write(f"""
-================
-SUMMARY
-================
-Total employees : {total_employees}
-Total payroll : {total_payroll}
-Average salary : {avg_salary}
-Highest-paid employee : {highest_paid_emp}
-Employees earning > 1000 : {High_pay}
------------------------
-""")
+# with open("Summary.txt", "w") as file:
+#     file.write(f"""
+# ================
+# SUMMARY
+# ================
+# Total employees : {total_employees}
+# Total payroll : {total_payroll}
+# Average salary : {avg_salary}
+# Highest-paid employee : {highest_paid_emp}
+# Employees earning > 1000 : {High_pay}
+# -----------------------
+# """)
+
+# from pathlib import Path
+# import csv
+# #aphro, d3vit,electro, irofizz,vitmiad,wom,znkc,biotina
+# file_loc = Path("S3_ZULULAN_PHARMA_202608.csv")
+
+# with file_loc.open("r", newline= "", encoding= "utf-8") as file:
+#     reader = csv.DictReader(file)
+#     found = []
+#     item_names = set()
+#     months = ["Jan", "Feb","Mar","Apr", "May", "Jun", "Jul"]
+#     aph = {m:0.0 for m in months}
+#     d3_vit = {m:0.0 for m in months}
+#     elect = {m:0.0 for m in months}
+#     iro = {m:0.0 for m in months}
+#     vitad = {m:0.0 for m in months}
+#     vitwo = {m:0.0 for m in months}
+#     znk = {m:0.0 for m in months}
+#     bio = {m:0.0 for m in months}
+# #total = sum(float(product[m]) + float(product[f"{m} Foc"]) for m in months)
+
+#     for data in reader:
+#         if "branch" in data["CustName"].lower() and not "NABORS" in data["CustName"] :
+#             found.append(data)
+#             item_names.add(data["Item Desc"])
+#     for product in found:
+#         for m in months:
+#             match(product["Item Desc"]):
+                
+#                 case "APHROVIT":
+#                     aph[m] += float(product[f"{m}"]) + float(product[f"{m} Foc"]) 
+
+#                 case "D3-VIT" :
+#                     d3_vit[m] += float(product[f"{m}"]) + float(product[f"{m} Foc"]) 
+
+#                 case "ELECTROBIOTICA":
+#                     elect[m] += float(product[f"{m}"]) + float(product[f"{m} Foc"]) 
+
+
+#                 case "IROFIZZ" :
+#                     iro[m] += float(product[f"{m}"]) + float(product[f"{m} Foc"]) 
+
+
+#                 case "VITMI-ADULTS" :
+#                     vitad[m] += float(product[f"{m}"]) + float(product[f"{m} Foc"]) 
+
+
+#                 case "VITMI WOMEN" :
+#                     vitwo[m] += float(product[f"{m}"]) + float(product[f"{m} Foc"]) 
+
+
+#                 case "ZINK C" :
+#                     znk[m] += float(product[f"{m}"]) + float(product[f"{m} Foc"]) 
+
+
+#                 case "BIOTINA (ORANGE FLAVOUR)" :
+#                     bio[m] +=float(product[f"{m}"]) + float(product[f"{m} Foc"]) 
+
+# with open("muscat_pharmacy_report.txt", "w") as file:
+#     for m in months:
+#     file.write(f"""
+# ============================================================
+# REPORT FOR ASKED PRODUCTS SALES BY MUSCAT PHARMACY BRANCHES
+# ============================================================
+
+# APHROVIT : {aph}
+
+# D3-VIT : {d3_vit}
+
+# ELECTROBIOTICA : {elect}
+
+# IROFIZZ : {iro}
+
+# VITMI-ADULTS : {vitad}
+
+# VITMI WOMEN : {vitwo}
+
+# ZINK C : {znk}
+
+# BIOTINA (ORANGE FLAVOUR) : {bio}
+
+#     """)
+
+
+
+
+
+        
+
+
+
 
 
 
